@@ -1,0 +1,35 @@
+{
+  "name": "bullseye",
+  "version": "1.0.0",
+  "description": "bot for crypto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegopmoreira/bullseye.git"
+  },
+  "keywords": [
+    "crypto"
+  ],
+  "author": "Diego Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegopmoreira/bullseye/issues"
+  },
+  "homepage": "https://github.com/diegopmoreira/bullseye#readme",
+  "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.3.1",
+    "npm": "^5.7.1",
+    "popper.js": "^1.14.1",
+    "sass": "^1.0.0-beta.5.3"
+  }
+}

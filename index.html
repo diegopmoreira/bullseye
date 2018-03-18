@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <title>Bullseye</title>
+</head>
+
+<body>
+  <div class="skeleton">
+    <h1 class="title">Bullseye CryptoTarget</h1>
+    <section class="left_side">
+      <form class="targets">
+
+        <h3>Pair:</h3>
+        <input class="pair" type="text" placeholder="Ex: ETH/BTC for sell eth ">
+        <h3>Amount:</h3>
+        <input class="amount" type="text" placeholder="How much want to sell. Ex: 1.1234">
+        <h3>Stop Loss:</h3>
+        <input class="target" type="text" placeholder="Target to stop loss. Ex: 0.03210">
+
+        <h3>Target 1:</h3>
+        <input class="target" type="text" placeholder="First target sell(satoshis) Ex: 0.04321">
+        <h3>Percentage 1:</h3>
+        <input class="percentage" type="text" placeholder="How much will sell of amount at first target. Ex: 50">
+        <span>%</span>
+        <h3>Target 2:</h3>
+        <input class="target" type="text" placeholder="Second target sell(satoshis) Ex: 0.04321">
+        <h3>Percentage 2:</h3>
+        <input class="percentage" type="text" placeholder="How much will sell of amount at second target. Ex: 50">
+        <span>%</span>
+        <h3>Target 3:</h3>
+        <input class="target" type="text" placeholder="Third target sell(satoshis) Ex: 0.04321">
+        <h3>Percentage 3:</h3>
+        <input class="percentage" type="text" placeholder="How much will sell of amount at third target. Ex: 50">
+        <span>%</span>
+        <h3>Target 4:</h3>
+        <input class="target" type="text" placeholder="Fourth target sell(satoshis) Ex: 0.04321">
+        <h3>Percentage 1:</h3>
+        <input class="percentage" type="text" placeholder="How much will sell of amount at forth target. Ex: 100">
+        <span>%</span>
+        <button class="submit">Submit</button>
+
+      </form>
+    </section>
+
+    <section class="right_side">
+      <form action="auths">
+        <input type="text" class="token">
+      </form>
+    </section>
+
+    <section class="records">
+      <table>
+        <tr>
+          <th>Pair</th>
+          <th>Amount</th>
+          <th>Stop Loss</th>
+          <th>First Target</th>
+          <th>Second Target</th>
+          <th>Third Target</th>
+          <th>Fourth Target</th>
+        </tr>
+        <tr>
+          <td>ETH/BTC</td>
+          <td>1.1234</td>
+          <td>0.4</td>
+          <td>0.8</td>
+          <td>1.8</td>
+          <td>2.8</td>
+          <td>3.8</td>
+        </tr>
+        <tr>
+          <td>LTC/BTC</td>
+          <td>1.1234</td>
+          <td>0.4</td>
+          <td>0.8</td>
+          <td>1.8</td>
+          <td>2.8</td>
+          <td>3.8</td>
+        </tr>
+      </table>
+    </section>
+    <footer class="footer">
+      Description of what is it. Description about github. MD5 HASH.
+    </footer>
+  </div>
+</body>
+
+<script src="src/js/app.js"></script>
+
+</html>

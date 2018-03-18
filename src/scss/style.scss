@@ -1,0 +1,53 @@
+$bg: whitesmoke;
+$font_all: Arial;
+
+body{
+  background: $bg;
+  font-family: $font_all;
+}
+
+.skeleton{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "title     title"
+  "left_side right_side"
+  "records   records"
+  "footer    footer"
+  ;
+  grid-gap:20px;
+}
+
+.title{
+  grid-area: title;  
+  justify-self: center;
+}
+
+.left_side{
+  grid-area: left_side; 
+  margin-left: 60px;
+
+  .targets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+  }
+  h3{
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+
+.right_side{
+  grid-area: right_side;
+}
+
+.records{
+  grid-area: records;
+}
+
+.footer{
+  grid-area: footer;
+}
