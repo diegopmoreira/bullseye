@@ -1,4 +1,5 @@
 $bg: whitesmoke;
+$footer: #ddd9ce;
 $font_all: Arial;
 
 body{
@@ -16,24 +17,49 @@ body{
   "footer    footer"
   ;
   grid-gap:20px;
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+  grid-template-areas: 
+  "title"
+  "right_side"
+  "left_side"
+  "records"
+  "footer"
+  ;
+  
+  }
 }
 
 .title{
   grid-area: title;  
   justify-self: center;
+  font-weight: bold;
+  font-size: 36px;
 }
 
 .left_side{
   grid-area: left_side; 
   margin-left: 60px;
+  @media (max-width: 850px){
+    margin-left: 0px;
+  }
 
   .targets{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 200px 120px 60px;
+    grid-gap: 10px;
    
   }
   h3{
-    grid-column: 1 / -1;
+    grid-column: 1;
+    align-self: center;
+  }
+  span{   
+    align-self: center;
+  }
+  button{
+    grid-column:1;
+    padding: 10px;
   }
 
 }
@@ -42,12 +68,54 @@ body{
 
 .right_side{
   grid-area: right_side;
+  
+  .auths{
+    display: grid;
+    grid-template-columns: 110px 200px;
+    grid-gap: 10px;
+    
+  }
+  div{
+    grid-column: 1/-1;
+  }
+  button{
+    padding: 10px;
+  }
 }
 
 .records{
   grid-area: records;
+  justify-self: center;
+  table, th, tr, td{
+    border: 1px solid black;
+    padding: 10px;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+}
+  th{
+    font-weight: bold;
+  }
+  caption{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 }
 
 .footer{
   grid-area: footer;
+  background: $footer;
+  margin-top: 20px;
+  p{
+    padding: 50px;
+    padding-left: 80px;
+    color: grey;
+    font-size: 18px;
+    @media (max-width: 850px){
+      padding:10px;
+    }
+  }
+
 }
+

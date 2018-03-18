@@ -18,31 +18,31 @@
       <form class="targets">
 
         <h3>Pair:</h3>
-        <input class="pair" type="text" placeholder="Ex: ETH/BTC for sell eth ">
+        <input class="pair" type="text" placeholder="Ex: ETH/BTC">
         <h3>Amount:</h3>
-        <input class="amount" type="text" placeholder="How much want to sell. Ex: 1.1234">
+        <input class="amount" type="text" placeholder="Ex: 1.1234">
         <h3>Stop Loss:</h3>
-        <input class="target" type="text" placeholder="Target to stop loss. Ex: 0.03210">
+        <input class="target" type="text" placeholder="Ex: 0.03210">
 
         <h3>Target 1:</h3>
-        <input class="target" type="text" placeholder="First target sell(satoshis) Ex: 0.04321">
+        <input class="target" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 1:</h3>
-        <input class="percentage" type="text" placeholder="How much will sell of amount at first target. Ex: 50">
+        <input class="percentage" type="text" placeholder="Ex: 50">
         <span>%</span>
         <h3>Target 2:</h3>
-        <input class="target" type="text" placeholder="Second target sell(satoshis) Ex: 0.04321">
+        <input class="target" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 2:</h3>
-        <input class="percentage" type="text" placeholder="How much will sell of amount at second target. Ex: 50">
+        <input class="percentage" type="text" placeholder="Ex: 50">
         <span>%</span>
         <h3>Target 3:</h3>
-        <input class="target" type="text" placeholder="Third target sell(satoshis) Ex: 0.04321">
+        <input class="target" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 3:</h3>
-        <input class="percentage" type="text" placeholder="How much will sell of amount at third target. Ex: 50">
+        <input class="percentage" type="text" placeholder="Ex: 50">
         <span>%</span>
         <h3>Target 4:</h3>
-        <input class="target" type="text" placeholder="Fourth target sell(satoshis) Ex: 0.04321">
-        <h3>Percentage 1:</h3>
-        <input class="percentage" type="text" placeholder="How much will sell of amount at forth target. Ex: 100">
+        <input class="target" type="text" placeholder="Ex: 0.04321">
+        <h3>Percentage 4:</h3>
+        <input class="percentage" type="text" placeholder="Ex: 100">
         <span>%</span>
         <button class="submit">Submit</button>
 
@@ -50,13 +50,22 @@
     </section>
 
     <section class="right_side">
-      <form action="auths">
-        <input type="text" class="token">
+      <form class="auths">
+        <h3>Token API:</h3>
+        <input type="text" class="token" placeholder="Insert TokenAPI.">
+        <div>
+          <input type="radio" name="exchange">Binance
+          <br>
+          <br>
+          <input type="radio" name="exchange">Poloniex
+        </div>
+        <button>Authenticate</button>
       </form>
     </section>
 
     <section class="records">
       <table>
+        <caption>Records</caption>
         <tr>
           <th>Pair</th>
           <th>Amount</th>
@@ -69,25 +78,41 @@
         <tr>
           <td>ETH/BTC</td>
           <td>1.1234</td>
-          <td>0.4</td>
-          <td>0.8</td>
-          <td>1.8</td>
-          <td>2.8</td>
-          <td>3.8</td>
+          <td>0.4<i></i></td>
+          <td>0.8<i></i></td>
+          <td>1.8<i></i></td>
+          <td>2.8<i></i></td>
+          <td>3.8<i></i></td>
         </tr>
         <tr>
           <td>LTC/BTC</td>
           <td>1.1234</td>
-          <td>0.4</td>
-          <td>0.8</td>
-          <td>1.8</td>
-          <td>2.8</td>
-          <td>3.8</td>
+          <td>0.4<i></i></td>
+          <td>0.8<i></i></td>
+          <td>1.8<i></i></td>
+          <td>2.8<i></i></td>
+          <td>3.8<i></i></td>
         </tr>
       </table>
     </section>
     <footer class="footer">
-      Description of what is it. Description about github. MD5 HASH.
+      <p>
+        This is a platform for place your targets of cryptos.<br>
+        First of all, write your token and authenticate.<br>
+        Then, fill all fields of targets, but targets fill how you want.<br>
+        I suggest write at last target percentage 100.<br>
+        You need keep browser open because the program run at client side.<br>
+        <strike>And I have CoinHive here...</strike><br>
+        <br>
+        <br> 
+        <a href="https://github.com/diegopmoreira/bullseye">https://github.com/diegopmoreira/bullseye</a> github for prevent guys.<br>
+        MD5 Hash for paranoic guys.<br>
+        And please donate a penny for me if that was useful for you.<br>
+        <br>
+        Bitcoin Wallet: aiousdhiusaohdiuosahduioashd<br>
+        Litecoin Wallet: aiousdhiusaohdiuosahduioashd<br>
+        Nano Wallet: aiousdhiusaohdiuosahduioashd<br>
+      </p>
     </footer>
   </div>
 </body>
