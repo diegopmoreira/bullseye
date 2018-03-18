@@ -52,14 +52,15 @@
     <section class="right_side">
       <form class="auths">
         <h3>Token API:</h3>
-        <input type="text" class="token" placeholder="Insert TokenAPI.">
+        <input type="text" class="token" placeholder="Insert APIKey.">
+        <input type="text" class="token_sec" placeholder="Insert SecretKey.">
         <div>
           <input type="radio" name="exchange">Binance
           <br>
           <br>
-          <input type="radio" name="exchange">Poloniex
+          <input type="radio" name="exchange" disabled>Poloniex
         </div>
-        <button>Authenticate</button>
+        <button class="auth">Authenticate</button>
       </form>
     </section>
 
@@ -112,11 +113,17 @@
         Bitcoin Wallet: aiousdhiusaohdiuosahduioashd<br>
         Litecoin Wallet: aiousdhiusaohdiuosahduioashd<br>
         Nano Wallet: aiousdhiusaohdiuosahduioashd<br>
+        
       </p>
+      <div class="captcha">Captcha</div>
+      
     </footer>
   </div>
 </body>
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 <script src="src/js/app.js"></script>
 
 </html>

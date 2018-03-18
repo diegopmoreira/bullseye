@@ -107,14 +107,28 @@ body{
   grid-area: footer;
   background: $footer;
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  
   p{
     padding: 50px;
+    width:50%;
     padding-left: 80px;
+    display:inline-block;
     color: grey;
     font-size: 18px;
     @media (max-width: 850px){
       padding:10px;
     }
+  }
+  .captcha{
+      justify-self: center;
+      align-self:center;
+      margin: 0 auto;
+      width: 100px;
+      height: 50px;
+      float: right;
+      background-color: white;
   }
 
 }
