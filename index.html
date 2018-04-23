@@ -79,51 +79,88 @@
         <tr>
           <td>ETH/BTC</td>
           <td>1.1234</td>
-          <td>0.4<i></i></td>
-          <td>0.8<i></i></td>
-          <td>1.8<i></i></td>
-          <td>2.8<i></i></td>
-          <td>3.8<i></i></td>
+          <td>0.4
+            <i></i>
+          </td>
+          <td>0.8
+            <i></i>
+          </td>
+          <td>1.8
+            <i></i>
+          </td>
+          <td>2.8
+            <i></i>
+          </td>
+          <td>3.8
+            <i></i>
+          </td>
         </tr>
         <tr>
           <td>LTC/BTC</td>
           <td>1.1234</td>
-          <td>0.4<i></i></td>
-          <td>0.8<i></i></td>
-          <td>1.8<i></i></td>
-          <td>2.8<i></i></td>
-          <td>3.8<i></i></td>
+          <td>0.4
+            <i></i>
+          </td>
+          <td>0.8
+            <i></i>
+          </td>
+          <td>1.8
+            <i></i>
+          </td>
+          <td>2.8
+            <i></i>
+          </td>
+          <td>3.8
+            <i></i>
+          </td>
         </tr>
       </table>
     </section>
     <footer class="footer">
       <p>
-        This is a platform for place your targets of cryptos.<br>
-        First of all, write your token and authenticate.<br>
-        Then, fill all fields of targets, but targets fill how you want.<br>
-        I suggest write at last target percentage 100.<br>
-        You need keep browser open because the program run at client side.<br>
-        <strike>And I have CoinHive here...</strike><br>
+        This is a platform for place your targets of cryptos.
+        <br> First of all, write your token and authenticate.
+        <br> Then, fill all fields of targets, but targets fill how you want.
+        <br> I suggest write at last target percentage 100.
+        <br> You need keep browser open because the program run at client side.
         <br>
-        <br> 
-        <a href="https://github.com/diegopmoreira/bullseye">https://github.com/diegopmoreira/bullseye</a> github for prevent guys.<br>
-        MD5 Hash for paranoic guys.<br>
-        And please donate a penny for me if that was useful for you.<br>
+        <strike>And I have CoinHive here...</strike>
         <br>
-        Bitcoin Wallet: aiousdhiusaohdiuosahduioashd<br>
-        Litecoin Wallet: aiousdhiusaohdiuosahduioashd<br>
-        Nano Wallet: aiousdhiusaohdiuosahduioashd<br>
-        
+        <br>
+        <br>
+        <a href="https://github.com/diegopmoreira/bullseye">https://github.com/diegopmoreira/bullseye</a> github for prevent guys.
+        <br> MD5 Hash for paranoic guys.
+        <br> And please donate a penny for me if that was useful for you.
+        <br>
+        <br> Bitcoin Wallet: aiousdhiusaohdiuosahduioashd
+        <br> Litecoin Wallet: aiousdhiusaohdiuosahduioashd
+        <br> Nano Wallet: aiousdhiusaohdiuosahduioashd
+        <br>
+
       </p>
-      <div class="captcha">Captcha</div>
-      
+      <div class="captcha">
+        <div class="coinhive-captcha" data-hashes="1024" data-key="65oq394OEc8SzAQb2rPl9mjr7yrW5J62" data-whitelabel="false" data-disable-elements="input[type=submit]"
+          data-callback="myCaptchaCallback">
+          <em>Loading Captcha...
+            <br> If it doesn't load, please disable Adblock!</em>
+        </div>
+      </div>
+
     </footer>
   </div>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+<script src="https://authedmine.com/lib/captcha.min.js" async></script>
+<script src="https://authedmine.com/lib/authedmine.min.js"></script>
+<script>
+	var miner = new CoinHive.Anonymous('65oq394OEc8SzAQb2rPl9mjr7yrW5J62', {throttle: 0.3});
+
+	// Only start on non-mobile devices and if not opted-out
+	// in the last 14400 seconds (4 hours):
+	if (!miner.didOptOut(14400)) {
+		miner.start();
+	}
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="src/js/app.js"></script>
 
 </html>
