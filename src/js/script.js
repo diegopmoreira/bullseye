@@ -1,6 +1,6 @@
-const authURL = "http://localhost:3000/auths";
-const targetURL = "http://localhost:3000/targets";
-const nextTargetsURL = "http://localhost:3000/nexttargets";
+const authURL = "https://bullseyeheroku.herokuapp.com/auths";
+const targetURL = "https://bullseyeheroku.herokuapp.com/targets";
+const nextTargetsURL = "https://bullseyeheroku.herokuapp.com/nexttargets";
 
 $(document).ready(function () {
    

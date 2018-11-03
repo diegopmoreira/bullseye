@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const Binance = require('../../node_modules/node-binance-api');
 const binance = new Binance();
 
-
+let port = process.env.PORT || 8080;
 
 // create the server 
 const app = express();
@@ -29,7 +29,7 @@ app.use(session({
   genid: (req) => {
     return uuid() // use UUIDs for session IDs
   },
-  secret: 'bullseye rules',
+  secret: 'something different',
   resave: false,
   saveUninitialized: true
 }));
@@ -135,6 +135,6 @@ app.post('/nexttargets', (req, res) => {
 });
 
 // tell the server what port to listen on
-app.listen(3000, () => {
-  console.log('Listening on localhost:3000');
+app.listen(port, () => {
+  console.log('Listening server port: ' + port);
 });
