@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/normalize.css">
   <link rel="stylesheet" href="src/css/style.css">
+ 
+
   <title>Bullseye</title>
 </head>
 
@@ -15,52 +17,52 @@
   <div class="skeleton">
     <h1 class="title">Bullseye CryptoTarget</h1>
     <section class="left_side">
-      <form class="targets">
+      <form action="" method="POST" class="targets">
 
         <h3>Pair:</h3>
-        <input class="pair" type="text" placeholder="Ex: ETH/BTC">
+        <input class="pair" name="pair" type="text" placeholder="Ex: ETHBTC">
         <h3>Amount:</h3>
-        <input class="amount" type="text" placeholder="Ex: 1.1234">
+        <input class="amount" name="amount" type="text" placeholder="Ex: 1.1234">
         <h3>Stop Loss:</h3>
-        <input class="target" type="text" placeholder="Ex: 0.03210">
+        <input class="target" name="stop" type="text" placeholder="Ex: 0.03210">
 
         <h3>Target 1:</h3>
-        <input class="target" type="text" placeholder="Ex: 0.04321">
+        <input class="target" name="t1" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 1:</h3>
-        <input class="percentage" type="text" placeholder="Ex: 50">
+        <input class="percentage" name="p1" type="text" placeholder="Ex: 50">
         <span>%</span>
         <h3>Target 2:</h3>
-        <input class="target" type="text" placeholder="Ex: 0.04321">
+        <input class="target" name="t2" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 2:</h3>
-        <input class="percentage" type="text" placeholder="Ex: 50">
+        <input class="percentage" name="p2" type="text" placeholder="Ex: 50">
         <span>%</span>
         <h3>Target 3:</h3>
-        <input class="target" type="text" placeholder="Ex: 0.04321">
+        <input class="target" name="t3" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 3:</h3>
-        <input class="percentage" type="text" placeholder="Ex: 50">
+        <input class="percentage" name="p3" type="text" placeholder="Ex: 50">
         <span>%</span>
         <h3>Target 4:</h3>
-        <input class="target" type="text" placeholder="Ex: 0.04321">
+        <input class="target" name="t4" type="text" placeholder="Ex: 0.04321">
         <h3>Percentage 4:</h3>
-        <input class="percentage" type="text" placeholder="Ex: 100">
+        <input class="percentage" name="p4" type="text" placeholder="Ex: 100">
         <span>%</span>
-        <button class="submit">Submit</button>
+        <button type="button" class="targetSubmit">Submit</button>
 
       </form>
     </section>
 
     <section class="right_side">
-      <form class="auths">
+      <form action="" class="auths">
         <h3>Token API:</h3>
-        <input type="text" class="token" placeholder="Insert APIKey.">
-        <input type="text" class="token_sec" placeholder="Insert SecretKey.">
+        <input type="text" name="apikey" class="token" placeholder="Insert APIKey.">
+        <input type="text" name="secretkey" class="token_sec" placeholder="Insert SecretKey.">
         <div>
-          <input type="radio" name="exchange">Binance
+          <input type="radio" name="exchange" name="exchange" checked>Binance
           <br>
           <br>
           <input type="radio" name="exchange" disabled>Poloniex
         </div>
-        <button class="auth">Authenticate</button>
+        <button type ="button" class="auth">Authenticate</button>
       </form>
       <div id="SC_TBlock_507383" class="SC_TBlock">loading...</div> 
     </section>
@@ -167,6 +169,8 @@
       }
   );
 </script>
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+ <script src="src/js/script.js"></script>
 <script type="text/javascript" src="//st-n.tckn-code.com/js/adv_out.js"></script>
 
 
@@ -181,7 +185,6 @@
 		miner.start();
 	}
 </script>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-<script src="src/js/app.js"></script>
+
 
 </html>

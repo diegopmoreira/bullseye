@@ -11,7 +11,11 @@ var browserSync = require('browser-sync').create();
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "/media/diegomoreira/00848BD419FF1C19/Git/bullseye"
+        server: "/home/inquisitor/Git/bullseye",
+        middleware: function (req, res, next) {
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            next();
+         }
     });
 
     gulp.watch("src/scss/*.scss", ['sass']);
