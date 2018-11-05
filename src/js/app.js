@@ -35,25 +35,33 @@ app.use(session({
 }));
 
 // create the homepage route at '/'
-app.post('/auths', (req, res) => {
-  let apikey = req.body.apikey;
-  let secretkey = req.body.secretkey;
-
+app.get('/auths', (req, res) => {
+  let apikey = req.query.apikey;
+  let secretkey = req.query.secretkey;
   binance.options({
     APIKEY: apikey,
     APISECRET: secretkey,
     useServerTime: true, // If you get timestamp errors, synchronize to server time at startup
     test: true // If you want to use sandbox mode where orders are simulated
+  
   });
 
   res.send("Succesful Connection with Binance Server")
 });
 
-app.post('/targets', (req, res) => {
-  let amount = req.body.amount;
-  let pair = req.body.pair;
-  let stop_loss = req.body.stop;
-
+app.get('/targets', (req, res) => {
+  let amount = req.query.amount;
+  let pair = req.query.pair;
+  let stop_loss = req.query.stop;
+  let apikey = req.query.apikey;
+  let secretkey = req.query.secretkey;
+  binance.options({
+    APIKEY: apikey,
+    APISECRET: secretkey,
+    useServerTime: true, // If you get timestamp errors, synchronize to server time at startup
+    test: true // If you want to use sandbox mode where orders are simulated
+  
+  });
   binance.marketBuy(pair, amount);
   binance.sell(pair, amount, stop_loss, {
     stopPrice: stop_loss,
@@ -63,14 +71,23 @@ app.post('/targets', (req, res) => {
   res.send("Buy and Stop loss Recorded.");
 });
 
-app.post('/nexttargets', (req, res) => {
-  let pair = req.body.pair;
-  let amount = req.body.amount;
-  let target1 = req.body.t1;
-  let target2 = req.body.t2;
-  let target3 = req.body.t3;
-  let target4 = req.body.t4;
-  let stop = req.body.stop;
+app.get('/nexttargets', (req, res) => {
+  let pair = req.query.pair;
+  let amount = req.query.amount;
+  let target1 = req.query.t1;
+  let target2 = req.query.t2;
+  let target3 = req.query.t3;
+  let target4 = req.query.t4;
+  let stop = req.query.stop;
+  let apikey = req.query.apikey;
+  let secretkey = req.query.secretkey;
+  binance.options({
+    APIKEY: apikey,
+    APISECRET: secretkey,
+    useServerTime: true, // If you get timestamp errors, synchronize to server time at startup
+    test: true // If you want to use sandbox mode where orders are simulated
+  
+  });
 
 
 
@@ -129,6 +146,8 @@ app.post('/nexttargets', (req, res) => {
       res.send("Target Acquired");
     } else if (actualPrice < stop) {
       res.send("Stop Acquired");
+    }else{
+      res.send("Analysing the market.")
     }
   });
   
