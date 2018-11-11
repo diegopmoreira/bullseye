@@ -145,7 +145,7 @@ app.get('/nexttargets', (req, res) => {
       amount = amount - amountSell4;
       res.send("Target Acquired");
     } else if (actualPrice < stop) {
-      res.send("Stop Acquired");
+      res.send(`Stop Acquired ${pair}`);
     }else{
       res.send("Analysing the market.")
     }

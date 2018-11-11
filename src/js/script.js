@@ -2,26 +2,44 @@ const authURL = "http://localhost:8080/auths";
 const targetURL = "http://localhost:8080/targets";
 const nextTargetsURL = "http://localhost:8080/nexttargets";
 
-const getAPI = (data, url, interval) => {
-  $.ajax({
-    type: "GET",
-    url: url,
-    data: data
-  })
-    .done(function(msg) {
-      if(msg == "Stop Acquired"){
-          alert(msg);
-        clearInterval(interval)
-    }else{
-        alert(msg)
-    };
-    })
-    .fail(function(msg) {
-      alert("Something went wrong." + msg);
-    });
-};
+
 
 $(document).ready(function() {
+
+  const removeRowStop = (pair) => {
+    $(".records table tr").each(function(index) {
+      if($(this).children("td").eq(0).text() == pair){
+        $(this).remove();
+     }
+    })
+  };
+
+  const getAPI = (data, url, removeRowStop) => {
+    $.ajax({
+      type: "GET",
+      url: url,
+      data: data
+    })
+      .done(function(msg) {
+        if(msg.includes("Stop Acquired")){
+          alert(msg);
+          let pairStop = msg.split("Acquired ");
+          pairStop = pairStop[1];
+          removeRowStop(pairStop);
+      }else{
+          alert(msg)
+      };
+      })
+      .fail(function(msg) {
+        alert("Something went wrong." + msg);
+      });
+  };
+  
+ 
+  $('#closeall').click(function(){
+    //still to done
+  })
+
   //Auth section
   $(".auth").click(function() {
     let data = {
@@ -140,10 +158,10 @@ $(document).ready(function() {
               .text()
           };
 
-          getAPI(data, nextTargetsURL,refreshInterval); 
+          getAPI(data, nextTargetsURL,removeRowStop); 
           
         }
       });
-    }, 5000);
+    }, 10000);
   });
 });
